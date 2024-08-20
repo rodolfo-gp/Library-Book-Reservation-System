@@ -1,0 +1,11 @@
+How we store the secure passwords and Sensitive Info:
+    1. Unique Salt for each user. Salt(stored in db)
+    2. Pepper(in txt file)
+    3. Hashed password stored in DB --> Hash(password + salt + pepper)
+
+
+Hasing: bcrypt
+Encription: AES256
+
+Salt: (random 4 chars long)
+Pepper: z
