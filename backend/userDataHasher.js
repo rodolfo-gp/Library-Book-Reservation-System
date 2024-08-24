@@ -1,11 +1,40 @@
 const bcrypt = require('bcrypt');
-const saltRounds = 12
-;
+const { Pool } = require("pg");
+
+const pool = new Pool({
+    user: 'oop',
+    host: 'localhost',
+    database: 'library-system-db',
+    password: 'oop',
+    port: 5432,
+});
 
 
-const email = 'jd@example.com'
-const pass = 'qwe'
-const salt = '$2b$10$F6EMRvmi1yz5WnoT937fLO'
+
+
+const saltRounds = 14;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function hashPassword() {
     const h_email = await bcrypt.hash(email, salt);
@@ -14,12 +43,14 @@ async function hashPassword() {
     console.log(h_pass); 
 }
 
-hashPassword();
+async function dbQuery(id) {
+    await pool.connect();
+    const result = await pool.query(`SELECT * FROM USERS WHERE user_id = ${id}`);
+    await pool.end();
+    return result;
+}
 
 
-// bcrypt.genSalt(saltRounds, function(err, salt) {
-//     console.log(salt);
-//     bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {
-//         console.log(hash);
-//     });
-// });
+//hashPassword();
+
+
