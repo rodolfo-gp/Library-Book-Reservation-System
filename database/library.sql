@@ -55,13 +55,13 @@ CREATE TABLE USERS (
 );
 /* Salt is generated using bcrypt, 10 rounds*/
 INSERT INTO USERS (user_id, fname, lname, age, email, pass, salt, h_email, h_pass) VALUES
-    (1, 'John', 'Doe', 28, 'jd@example.com', 'qwe', '$2b$10$F6EMRvmi1yz5WnoT937fLO','',''),
-    (2, 'Jane', 'Smith', 34, 'janesmith@example.com', 'qwerty!456', '$2b$10$Vr9mOC4ageD0mvaR7ShpGO','',''),
-    (3, 'Alice', 'Johnson', 22, 'alicej@example.com', 'alice2024$', '$2b$10$.V78..olcBdbaIc4JDcXnu','',''),
-    (4, 'Bob', 'Brown', 40, 'bobbrown@example.com', 'B0bP@ss789', '$2b$10$/jHh615d8Mhgb/pD1YNDxO','',''),
-    (5, 'Charlie', 'Davis', 29, 'charlied@example.com', 'CharL13!pass', '$2b$10$lijZXeFc.zy7PHp4zqJjse','',''),
-    (6, 'David', 'Wilson', 31, 'davidw@example.com', 'D@v1dP@ss123', '$2b$10$tTHzklOBdJsLQBRTnVio4e','',''),
-    (7, 'Emma', 'Thomas', 27, 'emmat@example.com', 'Emma!987pass', '$2b$10$zAtDgXZ4sal2ej1wDh/zqu','',''),
-    (8, 'Frank', 'Moore', 35, 'frankm@example.com', 'Fr@nk_456pass', '$2b$10$6nRnZKqsXzlvDKYj8hlEBu','',''),
-    (9, 'Grace', 'Taylor', 26, 'gracet@example.com', 'Gr@ce!123', '$2b$10$.NaE5ag7tLX6BqSx0Gyj4u','',''),
-    (10, 'Hank', 'Anderson', 32, 'hanka@example.com', 'H@nk789p@ss', '$2b$10$vJVBMa/cPnCXGF3yKiIs7e','','');
+        (1, 'John', 'Doe', 28, 'jd@example.com', 'qwe', '$2b$13$DGxxxRtZ.R.LUIr9YHhxne', '$2b$13$DGxxxRtZ.R.LUIr9YHhxneUWtdrAfrFY5UlWbjJbo9N9uVqo.YIwS', '$2b$13$DGxxxRtZ.R.LUIr9YHhxneNYFmWCeZuuHtCZdL/3Egfa6MoQlpnSS'), 
+        (2, 'Jane', 'Smith', 34, 'janesmith@example.com', 'qwerty!456', '$2b$13$wzZgw8M9AjxwxjAovDrpY.', '$2b$13$wzZgw8M9AjxwxjAovDrpY.W0UQVdG0mpgJE4oxp34IFY653AHaW4K', '$2b$13$wzZgw8M9AjxwxjAovDrpY.1Z/5/9AllDDoOSnzj0vwhd8fSs81n7y'), 
+        (3, 'Alice', 'Johnson', 22, 'alicej@example.com', 'alice2024$', '$2b$13$ZRvAQzaHj52jKxo1gSwmHO', '$2b$13$ZRvAQzaHj52jKxo1gSwmHOnu01Hg9M/QqScY9Jq.7SJTEXhlpRzAe', '$2b$13$ZRvAQzaHj52jKxo1gSwmHOO9oNqN5SFZXamczBTM8bIq6H1MVGa/y'), 
+        (4, 'Bob', 'Brown', 40, 'bobbrown@example.com', 'B0bP@ss789', '$2b$13$icHvNeiNyVY.mE2owO2Yqe', '$2b$13$icHvNeiNyVY.mE2owO2YqelSy5rinau2v4yWyRw.ug/qYI6wo5wRO', '$2b$13$icHvNeiNyVY.mE2owO2Yqe4yaSYYJJINqSKiZs0eUT5h.WqbxVyGC'), 
+        (5, 'Charlie', 'Davis', 29, 'charlied@example.com', 'CharL13!pass', '$2b$13$Tna64xD6LHXcjHTkC0.7iO', '$2b$13$Tna64xD6LHXcjHTkC0.7iOU/Uf2Y2VEHnU.HvEyQjBz5FqO3FsnTe', '$2b$13$Tna64xD6LHXcjHTkC0.7iOMVOAdaz1ZJV07mDXOxWgBlqZlC1dKg.'), 
+        (6, 'David', 'Wilson', 31, 'davidw@example.com', 'D@v1dP@ss123', '$2b$13$3wIUH3Af76I3t5ngPh9AFe', '$2b$13$3wIUH3Af76I3t5ngPh9AFeF5IoJ3J1.iAm7Z9.KrljP/RYfYdA4tW', '$2b$13$3wIUH3Af76I3t5ngPh9AFeL.sVu8dlm7.NTXi/ItZn1ML6X6uBLZe'), 
+        (7, 'Emma', 'Thomas', 27, 'emmat@example.com', 'Emma!987pass', '$2b$13$v8cwRk2c3AfaQSFxnm3RM.', '$2b$13$v8cwRk2c3AfaQSFxnm3RM.GQ9MjySV4St.M10D5QHB1ekiwmPt6.q', '$2b$13$v8cwRk2c3AfaQSFxnm3RM.Xg70ytVjQCJQHxJGo2y.Bi2oAN8uK9i'), 
+        (8, 'Frank', 'Moore', 35, 'frankm@example.com', 'Fr@nk_456pass', '$2b$13$SDPT/.ouE15Zo3qtG60sp.', '$2b$13$SDPT/.ouE15Zo3qtG60sp.ITRwYgQASYnYmFmNXiKg40UkoRtGlwq', '$2b$13$SDPT/.ouE15Zo3qtG60sp.RKgBvoOyxmqZHAMQB1BxKKnBmBp9YwS'), 
+        (9, 'Grace', 'Taylor', 26, 'gracet@example.com', 'Gr@ce!123', '$2b$13$PF6wg3kAxdtEO7sSRQ8Yee', '$2b$13$PF6wg3kAxdtEO7sSRQ8YeewKH1He90VX3CCUhbE/s3x5Q4qp6OjJu', '$2b$13$PF6wg3kAxdtEO7sSRQ8Yeeab5EWQzSeF3x4zmCzwzkDBNGLfAo4mm'), 
+        (10, 'Hank', 'Anderson', 32, 'hanka@example.com', 'H@nk789p@ss', '$2b$13$vtBVlkX.Qzlc0cp/rnvSw.', '$2b$13$vtBVlkX.Qzlc0cp/rnvSw.fajHeEk7GcrJlugAfT/St7lwfG4Dl0e', '$2b$13$vtBVlkX.Qzlc0cp/rnvSw.5GPt8I1Rccc1Pa1G4mwT1pTfHNZzqEW');
