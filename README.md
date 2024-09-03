@@ -1,4 +1,4 @@
-Here's how you can fill in the blanks for the `Library Book Reservation System` README:
+This README.md file is still under cnstruction. And will have future edits.
 
 # Library Book Reservation System
 
