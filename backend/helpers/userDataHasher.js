@@ -14,10 +14,10 @@ const pool = new Pool({
 
 (async () => {
     console.log('INSERT INTO USERS (user_id, fname, lname, age, email, pass, salt, h_email, h_pass) VALUES')
+    let newSalt = bcrypt.genSaltSync(saltRounds);
     for (let userID = 1; userID <= lastUserID; userID += 1) {
         let ender = ',';
         if(userID == lastUserID){ender = ';'}
-        let newSalt = bcrypt.genSaltSync(saltRounds);
         let result = await dbQuery(userID);  
         let h_email = bcrypt.hashSync(result.rows[0].email, newSalt);
         let h_pass = bcrypt.hashSync(result.rows[0].pass, newSalt);
