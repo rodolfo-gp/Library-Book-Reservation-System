@@ -1,4 +1,4 @@
-This README.md file is still under cnstruction. And will have future edits.
+This project is still under development. Along with this readme.md file
 
 # Library Book Reservation System
 
